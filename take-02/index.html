@@ -216,6 +216,18 @@ h2+.rubric{margin-top:0}
 .part{margin:30px 0 0;padding-top:24px;border-top:1px solid var(--line)}
 .part:first-of-type{margin-top:24px}
 .opts{display:flex;gap:10px;flex-wrap:wrap}
+.opts.col{flex-direction:column;gap:9px;align-items:stretch}
+.opts.col .opt{text-align:left;line-height:1.5;padding:13px 16px}
+.dark .opt{background:rgba(255,255,255,.05);border-color:rgba(226,182,88,.3);color:var(--hero-ink)}
+.dark .opt[aria-pressed="true"]{background:var(--hero-gold);color:var(--night);border-color:var(--hero-gold)}
+.dark .opt.right{border-color:#8FB07E;box-shadow:inset 0 -3px 0 #8FB07E}
+.dark .opt.right .tick{color:#8FB07E}
+.dark .opt[aria-pressed="true"].right{background:#4E6B41;color:#F6F2E7;border-color:#4E6B41}
+.dark .opt[aria-pressed="true"].right .tick{color:#F6F2E7}
+.dark .opt[aria-pressed="true"].wrong{background:transparent;color:rgba(223,214,196,.62);
+ border-color:rgba(226,182,88,.22);text-decoration:line-through}
+.dark .frameline{color:var(--hero-ink)}
+.micro.nomt{margin-top:0;margin-bottom:10px}
 .opt{font-family:'InterV';font-size:16px;background:var(--card);border:1px solid var(--line-2);
  padding:10px 17px;cursor:pointer;color:var(--charcoal)}
 .opt[aria-pressed="true"]{background:var(--charcoal);color:var(--stone);border-color:var(--charcoal)}
@@ -337,12 +349,16 @@ p.flab{margin-top:22px}
 <p class="rubric" lang="en">Second listen — now you may pause</p>
 <p class="q" lang="en"><span class="qn" lang="en">1</span>Why can a celebrity endorsement work as a mental shortcut?</p><div class="f"><textarea class="fld" id="l2a" data-k="l2a" data-label="Listening Q1 — the endorsement" rows="3" placeholder="" spellcheck="false"></textarea></div><p class="q" lang="en"><span class="qn" lang="en">2</span>Why might people spend more at a touchscreen than when ordering from a person?</p><div class="f"><textarea class="fld" id="l2b" data-k="l2b" data-label="Listening Q2 — the touchscreen" rows="3" placeholder="" spellcheck="false"></textarea></div><p class="q" lang="en"><span class="qn" lang="en">3</span>How did the World Food Programme try to change behaviour in Tunisia?</p><div class="f"><textarea class="fld" id="l2c" data-k="l2c" data-label="Listening Q3 — Tunisia" rows="3" placeholder="" spellcheck="false"></textarea></div></div></section>
 <section class="dark" id="beyond"><div class="in"><p class="k" lang="en">Think Beyond the Audio</p><h2 lang="en">One result does not prove one cause.</h2>
-<p class="q" lang="en">Fast-food chains reported taking more money after installing touchscreens. Dean Ward gives four possible reasons: people feel less judged, they have more time, they can see more products, and the machine keeps offering extras. Does the rise in spending prove that feeling less judged is the cause? Two sentences.</p>
-<div class="f"><textarea class="fld" id="l3" data-k="l3" data-label="Think Beyond the Audio" rows="3" placeholder="Two sentences." spellcheck="false"></textarea></div>
+<p class="q" lang="en">Fast-food chains reported taking more money after installing touchscreens. Dean Ward gives four possible reasons: people feel less judged, they have more time, they can see more products, and the machine keeps offering extras. Does the rise in spending prove that feeling less judged is the cause?</p>
+<p class="rubric" lang="en">Choose the honest answer</p>
+<div class="opts col"><button class="opt tbopt" type="button" data-g="tb" data-i="0" data-key="0" lang="en">Feeling less judged made people spend more.<span class="tick">✓</span></button><button class="opt tbopt" type="button" data-g="tb" data-i="1" data-key="1" lang="en">Something about the touchscreens made people spend more, but we cannot tell which part.<span class="tick">✓</span></button><button class="opt tbopt" type="button" data-g="tb" data-i="2" data-key="0" lang="en">The touchscreens made no difference at all.<span class="tick">✓</span></button></div>
+<button class="btn" type="button" id="tbbtn" lang="en">Check</button>
+<p class="rubric" lang="en">Now finish this sentence</p>
+<p class="frameline" lang="en">We cannot be sure it was the judgement, because ______.</p>
+<div class="f"><textarea class="fld" id="l3" data-k="l3" data-label="Think Beyond the Audio" rows="3" placeholder="One sentence." spellcheck="false"></textarea></div>
 <button class="btn" type="button" data-rev="hint1" lang="en">Show the lens</button>
 <p class="hidden hint" id="hint1" lang="en">Several things changed at the same time. The higher spending tells us that something worked — not which change did the work.</p>
-<p class="micro" lang="en">This question returns in every Take, wearing a different lens.
-Next time it may be cause against correlation, or one example against a general trend.</p></div></section>
+<p class="micro" lang="en">This question returns in every Take, wearing a different lens. Last time it was belief against fact. Next time it may be one example against a general trend.</p></div></section>
 <section class="sec" id="b03"><div class="in"><p class="k" lang="en">03 · Episode Text</p><h2 lang="en">Now find out what you missed.</h2>
 <p class="lead" lang="en">The text is not for your first understanding. It is here to show you
 what your ears missed — which is a different and more useful thing.</p>
@@ -382,28 +398,34 @@ and do not simply swap in synonyms — change the structure. Keep the hedge.</p
 <p class="subk" lang="en">Read your five sentences again</p>
 <ul class="check"><li lang="en">Does each sentence name a cause <b>and</b> a result — or only one of the two?</li><li lang="en">Where the claim is not certain, did you hedge it, or state it as a fact?</li><li lang="en">Would you say this out loud in an exam? If it sounds like a book, rewrite it.</li></ul></div></section>
 <section class="sec" id="b07"><div class="in"><p class="k" lang="en">07 · Speak</p><h2 lang="en">Explain it under time.</h2>
-<p class="lead" lang="en">Record both parts as <b>one voice message</b> on WhatsApp and send it to Ali&nbsp;Hoca. Record in one go — do not stop and start again. Hesitating is normal; deleting and re-recording five times is not practice.</p>
-<p class="subk" lang="en">Step 1 — Plan it</p>
-<p class="micro" lang="en">Do not write full sentences here. Write only the key words you will speak from. You are allowed to look at these notes while you record.</p>
-<div class="part"><p class="fn" lang="en">Notes for Part 1 — the three mechanisms</p><p class="micro" lang="en">Endorsement · touchscreen · television drama · what changed and what people then did · two Bank items</p><div class="f"><textarea class="fld" id="plan1" data-k="plan1" data-label="Notes for Part 1 — the three mechanisms" rows="4" placeholder="Key words only." spellcheck="false"></textarea></div></div><div class="part"><p class="fn" lang="en">Notes for Part 2 — my position</p><p class="micro" lang="en">My view · one reason · one example · one causal frame from this Take · one stance move from Take 01</p><div class="f"><textarea class="fld" id="plan2" data-k="plan2" data-label="Notes for Part 2 — my position" rows="4" placeholder="Key words only." spellcheck="false"></textarea></div></div>
-<p class="subk" lang="en">Step 2 — Record it</p>
-<p class="micro" lang="en">Press the timer, then speak until it reaches zero. If you still have
-something to say when it stops, keep going. Stopping early is the mistake — not hesitating.</p>
+<p class="lead" lang="en">Record both parts as one voice message on WhatsApp and send it to Ali&nbsp;Hoca.</p>
+<p class="micro" lang="en">Do not write full sentences in the notes. Write only the key words you will speak from. You are allowed to look at them while you record.</p>
 
 <div class="row part">
   <p class="fn" lang="en"><span class="qn" lang="en">1</span>Explain the three mechanisms</p>
   <p class="q" lang="en">Open with <i>The programme explains that…</i> For each of the three examples, say what changed in the situation and what people then did. Use at least two items from the Language Bank.</p>
+  <p class="flab" lang="en">Notes for Part 1</p>
+  <p class="micro nomt" lang="en">Endorsement · touchscreen · television drama · what changed and what people then did · two Bank items</p>
+  <div class="f"><textarea class="fld" id="plan1" data-k="plan1" data-label="Notes for Part 1" rows="4" placeholder="Key words only." spellcheck="false"></textarea></div>
+  <p class="micro nomt" lang="en">Then press the timer and speak. Keep going if you still have
+  something to say when it reaches zero.</p>
   <button class="btn timer" type="button" data-secs="45" lang="en">
     <span class="tv">45</span><span class="tu">seconds</span></button>
 </div>
 <div class="row part">
   <p class="fn" lang="en"><span class="qn" lang="en">2</span>Take a position</p>
-  <p class="q" lang="en">Should companies be allowed to design places that make us spend more than we planned? Use <b>one causal frame from this Take</b> and <b>one stance move from Take 01</b> — a concession, or a way of reporting a worry that is not your own.</p>
+  <p class="q" lang="en">Should companies be allowed to design places that make us spend more than we planned? Before you state your view, concede something to the other side — <i>While ______, ______.</i> Then explain your reason with a cause-and-result frame from this Take.</p>
+  <p class="flab" lang="en">Notes for Part 2</p>
+  <p class="micro nomt" lang="en">My view · what I concede · one reason · one example · one causal frame · one hedge</p>
+  <div class="f"><textarea class="fld" id="plan2" data-k="plan2" data-label="Notes for Part 2" rows="4" placeholder="Key words only." spellcheck="false"></textarea></div>
+  <p class="micro nomt" lang="en">Then press the timer and speak. Keep going if you still have
+  something to say when it reaches zero.</p>
   <button class="btn timer" type="button" data-secs="60" lang="en">
     <span class="tv">60</span><span class="tu">seconds</span></button>
 </div>
-<p class="subk" lang="en">Step 3 — Check it, then send it</p>
-<ul class="check"><li lang="en">Did you name a cause and a result each time, or only describe what happened?</li><li lang="en">Did you hedge at least once?</li><li lang="en">In Part 2, did you clearly use one stance move from Take 01 — a concession, or a worry reported as someone else's?</li><li lang="en">Did any tired expression slip in?</li></ul>
+<p class="subk" lang="en">Check it, then send it</p>
+<ul class="check"><li lang="en">Did you name a cause and a result each time, or only describe what happened?</li><li lang="en">Did you concede something before making your claim?</li><li lang="en">Did you hedge at least once?</li><li lang="en">Did any tired expression slip in?</li></ul>
+<p class="micro" lang="en">You may record yourself more than once. That is rehearsal, and rehearsal is progress. Send the version you are happiest with.</p>
 <p class="micro" lang="en">Then press <b>Copy my work</b> below and send that message to Ali&nbsp;Hoca as well, so he can see your writing beside your recording.</p></div></section>
 <section class="dark" id="ba"><div class="in"><p class="k" lang="en">Before → After</p><h2 lang="en">Look at what your sentence can do now.</h2>
 <p class="q" lang="en">Rewrite your opening sentence — the thing you bought without planning to. This time explain it as a mechanism, not as a story.
@@ -468,9 +490,18 @@ Put both versions side by side. The distance between them is the lesson.</p>
     document.getElementById('gate').classList.add('hidden');
   });
 
+  var tb=document.getElementById('tbbtn');
+  if(tb) tb.addEventListener('click',function(){
+    document.querySelectorAll('.tbopt').forEach(function(o){
+      if(o.dataset.key==='1') o.classList.add('right');
+      else if(o.getAttribute('aria-pressed')==='true') o.classList.add('wrong');
+    });
+    tb.remove();
+  });
+
   var ck=document.getElementById('ckbtn');
   if(ck) ck.addEventListener('click',function(){
-    document.querySelectorAll('.opt').forEach(function(o){
+    document.querySelectorAll('.opt:not(.tbopt)').forEach(function(o){
       if(o.dataset.key==='1') o.classList.add('right');
       else if(o.getAttribute('aria-pressed')==='true') o.classList.add('wrong');
     });
