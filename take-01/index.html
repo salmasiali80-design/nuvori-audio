@@ -216,6 +216,18 @@ h2+.rubric{margin-top:0}
 .part{margin:30px 0 0;padding-top:24px;border-top:1px solid var(--line)}
 .part:first-of-type{margin-top:24px}
 .opts{display:flex;gap:10px;flex-wrap:wrap}
+.opts.col{flex-direction:column;gap:9px;align-items:stretch}
+.opts.col .opt{text-align:left;line-height:1.5;padding:13px 16px}
+.dark .opt{background:rgba(255,255,255,.05);border-color:rgba(226,182,88,.3);color:var(--hero-ink)}
+.dark .opt[aria-pressed="true"]{background:var(--hero-gold);color:var(--night);border-color:var(--hero-gold)}
+.dark .opt.right{border-color:#8FB07E;box-shadow:inset 0 -3px 0 #8FB07E}
+.dark .opt.right .tick{color:#8FB07E}
+.dark .opt[aria-pressed="true"].right{background:#4E6B41;color:#F6F2E7;border-color:#4E6B41}
+.dark .opt[aria-pressed="true"].right .tick{color:#F6F2E7}
+.dark .opt[aria-pressed="true"].wrong{background:transparent;color:rgba(223,214,196,.62);
+ border-color:rgba(226,182,88,.22);text-decoration:line-through}
+.dark .frameline{color:var(--hero-ink)}
+.micro.nomt{margin-top:0;margin-bottom:10px}
 .opt{font-family:'InterV';font-size:16px;background:var(--card);border:1px solid var(--line-2);
  padding:10px 17px;cursor:pointer;color:var(--charcoal)}
 .opt[aria-pressed="true"]{background:var(--charcoal);color:var(--stone);border-color:var(--charcoal)}
@@ -337,12 +349,16 @@ p.flab{margin-top:22px}
 <p class="rubric" lang="en">Second listen — now you may pause</p>
 <p class="q" lang="en"><span class="qn" lang="en">1</span>Beth names a modern reason it is getting harder to meet opposing views. What is it, and how does it make opposing views harder to meet?</p><div class="f"><textarea class="fld" id="l2a" data-k="l2a" data-label="Listening Q1 — the mechanism" rows="3" placeholder="" spellcheck="false"></textarea></div><p class="q" lang="en"><span class="qn" lang="en">2</span>The dating study appears to support open-mindedness, but the researchers found something that complicates it. What was it — and why is it awkward?</p><div class="f"><textarea class="fld" id="l2b" data-k="l2b" data-label="Listening Q2 — the complication" rows="3" placeholder="" spellcheck="false"></textarea></div></div></section>
 <section class="dark" id="beyond"><div class="in"><p class="k" lang="en">Think Beyond the Audio</p><h2 lang="en">A number is not a fact about the world.</h2>
-<p class="q" lang="en">The poll says 80% of British people <em>believe</em> society is divided. Does that prove society <em>is</em> divided? Answer in two sentences.</p>
-<div class="f"><textarea class="fld" id="l3" data-k="l3" data-label="Think Beyond the Audio" rows="3" placeholder="Two sentences." spellcheck="false"></textarea></div>
+<p class="q" lang="en">The poll says 80% of British people <em>believe</em> society is divided. Does that prove society <em>is</em> divided?</p>
+<p class="rubric" lang="en">Choose the honest answer</p>
+<div class="opts col"><button class="opt tbopt" type="button" data-g="tb" data-i="0" data-key="0" lang="en">Yes — 80% is a very large number.<span class="tick">✓</span></button><button class="opt tbopt" type="button" data-g="tb" data-i="1" data-key="1" lang="en">No — the poll tells us what people think, not what is actually true.<span class="tick">✓</span></button><button class="opt tbopt" type="button" data-g="tb" data-i="2" data-key="0" lang="en">No — the poll did not ask enough people.<span class="tick">✓</span></button></div>
+<button class="btn" type="button" id="tbbtn" lang="en">Check</button>
+<p class="rubric" lang="en">Now finish this sentence</p>
+<p class="frameline" lang="en">The poll tells us what people believe. It does not tell us ______.</p>
+<div class="f"><textarea class="fld" id="l3" data-k="l3" data-label="Think Beyond the Audio" rows="3" placeholder="One sentence." spellcheck="false"></textarea></div>
 <button class="btn" type="button" data-rev="hint1" lang="en">Show the lens</button>
 <p class="hidden hint" id="hint1" lang="en">A poll measures what people think is true. That is not the same as what is true.</p>
-<p class="micro" lang="en">This question returns in every Take, wearing a different lens.
-Next time it may be cause against correlation, or one example against a general trend.</p></div></section>
+<p class="micro" lang="en">This question returns in every Take, wearing a different lens. Next time it may be one cause against several, or one example against a general trend.</p></div></section>
 <section class="sec" id="b03"><div class="in"><p class="k" lang="en">03 · Episode Text</p><h2 lang="en">Now find out what you missed.</h2>
 <p class="lead" lang="en">The text is not for your first understanding. It is here to show you
 what your ears missed — which is a different and more useful thing.</p>
@@ -382,28 +398,34 @@ and do not simply swap in synonyms — change the structure. Keep the hedge.</p
 <p class="subk" lang="en">Read your five sentences again</p>
 <ul class="check"><li lang="en">Does each sentence make one clear claim — or is it two sentences pretending to be one?</li><li lang="en">Where the claim is not certain, did you hedge it, or did you state it as a fact?</li><li lang="en">Would you say this out loud in an exam? If it sounds like a book, rewrite it.</li></ul></div></section>
 <section class="sec" id="b07"><div class="in"><p class="k" lang="en">07 · Speak</p><h2 lang="en">Say it under time.</h2>
-<p class="lead" lang="en">Record both parts as <b>one voice message</b> on WhatsApp and send it to Ali&nbsp;Hoca. Record in one go — do not stop and start again. Hesitating is normal; deleting and re-recording five times is not practice.</p>
-<p class="subk" lang="en">Step 1 — Plan it</p>
-<p class="micro" lang="en">Do not write full sentences here. Write only the key words you will speak from. You are allowed to look at these notes while you record.</p>
-<div class="part"><p class="fn" lang="en">Notes for Part 1 — the argument</p><p class="micro" lang="en">The claim · the expert evidence · the study that complicates it · two Bank items you will use</p><div class="f"><textarea class="fld" id="plan1" data-k="plan1" data-label="Notes for Part 1 — the argument" rows="4" placeholder="Key words only." spellcheck="false"></textarea></div></div><div class="part"><p class="fn" lang="en">Notes for Part 2 — my position</p><p class="micro" lang="en">My position · one reason · one example · three Bank items · one hedge</p><div class="f"><textarea class="fld" id="plan2" data-k="plan2" data-label="Notes for Part 2 — my position" rows="4" placeholder="Key words only." spellcheck="false"></textarea></div></div>
-<p class="subk" lang="en">Step 2 — Record it</p>
-<p class="micro" lang="en">Press the timer, then speak until it reaches zero. If you still have
-something to say when it stops, keep going. Stopping early is the mistake — not hesitating.</p>
+<p class="lead" lang="en">Record both parts as one voice message on WhatsApp and send it to Ali&nbsp;Hoca.</p>
+<p class="micro" lang="en">Do not write full sentences in the notes. Write only the key words you will speak from. You are allowed to look at them while you record.</p>
 
 <div class="row part">
   <p class="fn" lang="en"><span class="qn" lang="en">1</span>Report the argument</p>
   <p class="q" lang="en">Open with <i>The programme argues that…</i> Cover the claim, the expert evidence, and the study that complicates it. Use at least two items from the Language Bank.</p>
+  <p class="flab" lang="en">Notes for Part 1</p>
+  <p class="micro nomt" lang="en">The claim · the expert evidence · the study that complicates it · two Bank items you will use</p>
+  <div class="f"><textarea class="fld" id="plan1" data-k="plan1" data-label="Notes for Part 1" rows="4" placeholder="Key words only." spellcheck="false"></textarea></div>
+  <p class="micro nomt" lang="en">Then press the timer and speak. Keep going if you still have
+  something to say when it reaches zero.</p>
   <button class="btn timer" type="button" data-secs="45" lang="en">
     <span class="tv">45</span><span class="tu">seconds</span></button>
 </div>
 <div class="row part">
   <p class="fn" lang="en"><span class="qn" lang="en">2</span>Take a position</p>
-  <p class="q" lang="en">Go back to the sentence you wrote before you pressed play. Do you still agree with yourself? Use three Language Bank items and one hedge.</p>
+  <p class="q" lang="en">Go back to the sentence you wrote before you pressed play. Do you still agree with yourself? Before you state your view, concede something to the other side — <i>While ______, ______.</i> Then use three Language Bank items and one hedge.</p>
+  <p class="flab" lang="en">Notes for Part 2</p>
+  <p class="micro nomt" lang="en">My position · one reason · one example · what I concede · three Bank items · one hedge</p>
+  <div class="f"><textarea class="fld" id="plan2" data-k="plan2" data-label="Notes for Part 2" rows="4" placeholder="Key words only." spellcheck="false"></textarea></div>
+  <p class="micro nomt" lang="en">Then press the timer and speak. Keep going if you still have
+  something to say when it reaches zero.</p>
   <button class="btn timer" type="button" data-secs="60" lang="en">
     <span class="tv">60</span><span class="tu">seconds</span></button>
 </div>
-<p class="subk" lang="en">Step 3 — Check it, then send it</p>
-<ul class="check"><li lang="en">Did you speak for the full time without stopping?</li><li lang="en">Did you hedge at least once?</li><li lang="en">Did you concede anything before making your claim?</li><li lang="en">Did you use the Bank items, or did you avoid them because they felt risky?</li></ul>
+<p class="subk" lang="en">Check it, then send it</p>
+<ul class="check"><li lang="en">Did you speak for the full time without stopping?</li><li lang="en">Did you hedge at least once?</li><li lang="en">Did you concede something before making your claim?</li><li lang="en">Did you use the Bank items, or avoid them because they felt risky?</li></ul>
+<p class="micro" lang="en">You may record yourself more than once. That is rehearsal, and rehearsal is progress. Send the version you are happiest with.</p>
 <p class="micro" lang="en">Then press <b>Copy my work</b> at the bottom and send that message to Ali&nbsp;Hoca as well, so he can see your writing beside your recording.</p></div></section>
 <section class="dark" id="ba"><div class="in"><p class="k" lang="en">Before → After</p><h2 lang="en">Look at what your sentence can do now.</h2>
 <p class="q" lang="en">Now rewrite the sentence you wrote before you pressed play.
@@ -468,9 +490,18 @@ Put both versions side by side. The distance between them is the lesson.</p>
     document.getElementById('gate').classList.add('hidden');
   });
 
+  var tb=document.getElementById('tbbtn');
+  if(tb) tb.addEventListener('click',function(){
+    document.querySelectorAll('.tbopt').forEach(function(o){
+      if(o.dataset.key==='1') o.classList.add('right');
+      else if(o.getAttribute('aria-pressed')==='true') o.classList.add('wrong');
+    });
+    tb.remove();
+  });
+
   var ck=document.getElementById('ckbtn');
   if(ck) ck.addEventListener('click',function(){
-    document.querySelectorAll('.opt').forEach(function(o){
+    document.querySelectorAll('.opt:not(.tbopt)').forEach(function(o){
       if(o.dataset.key==='1') o.classList.add('right');
       else if(o.getAttribute('aria-pressed')==='true') o.classList.add('wrong');
     });
